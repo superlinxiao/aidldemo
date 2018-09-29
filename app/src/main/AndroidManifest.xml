@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.linxiao.aidlserver">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.linxiao.aidlserver.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Exported services (services which either set exported=true or contain an intent-filter
+      and do not specify exported=false) should define a permission that an entity must have
+      in order to launch the service or bind to it. Without this, any application can use this service.-->
+        <service android:name="com.linxiao.aidlserver.AddService">
+            <intent-filter>
+                <action android:name="com.linxiao.aldlservice" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
